@@ -23,6 +23,17 @@ public class Student_Entity {
     @Column(name = "Grades")
     private char Grades;
 
+
+    private Certificate certificate;
+
+    public Certificate getCertificate() {
+        return certificate;
+    }
+
+    public void setCertificate(Certificate certificate) {
+        this.certificate = certificate;
+    }
+
     public Student_Entity() {
     }
 
@@ -59,10 +70,7 @@ public class Student_Entity {
     }
 
 
-    @Override
-    public String toString() {
-        return "Student [id=" + id + ", name=" + name + ", age=" + age + "]";
-    }
+
 
 
 }

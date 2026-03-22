@@ -1,5 +1,6 @@
 package com.hibernate.app;
 
+import com.hibernate.entities.Certificate;
 import com.hibernate.entities.StudentAddress_Entity;
 import com.hibernate.entities.Student_Entity;
 import com.hibernate.utils.Utility;
@@ -28,6 +29,11 @@ public class App {
             S1.setAge(21);
             S1.setGrades('A');
 
+            Certificate certificate = new Certificate();
+            certificate.setCourse("Java Full Stack");
+            certificate.setDuration("5 Months");
+
+            S1.setCertificate(certificate);
             session.persist(S1);
 
 
