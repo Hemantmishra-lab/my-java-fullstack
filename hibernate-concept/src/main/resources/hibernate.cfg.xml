@@ -22,5 +22,6 @@
 
         <!--mapping tag -->
         <mapping class ="com.hibernate.entities.Student_Entity"/>
+        <mapping class="com.hibernate.entities.StudentAddress_Entity"/>
     </session-factory>
 </hibernate-configuration>
