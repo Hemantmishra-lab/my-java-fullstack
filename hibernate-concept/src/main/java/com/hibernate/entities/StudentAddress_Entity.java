@@ -2,6 +2,8 @@ package com.hibernate.entities;
 
 
 import jakarta.persistence.*;
+
+import java.util.Arrays;
 import java.util.Date;
 
 
@@ -98,5 +100,18 @@ public class StudentAddress_Entity {
 
     public void setImage(byte[] image) {
         this.image = image;
+    }
+
+    @Override
+    public String toString() {
+        return "StudentAddress_Entity{" +
+                "Address_ID=" + Address_ID +
+                ", streetNo=" + streetNo +
+                ", city='" + city + '\'' +
+                ", isOpen=" + isOpen +
+                ", x=" + x +
+                ", addedDate=" + addedDate +
+                ", image=" + Arrays.toString(image) +
+                '}';
     }
 }

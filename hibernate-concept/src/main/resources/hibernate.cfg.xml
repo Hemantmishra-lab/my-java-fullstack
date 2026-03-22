@@ -18,10 +18,12 @@
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
-        <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
 
         <!--mapping tag -->
         <mapping class ="com.hibernate.entities.Student_Entity"/>
         <mapping class="com.hibernate.entities.StudentAddress_Entity"/>
+        <mapping class="com.hibernate.entities.Student_Entity"/>
+
     </session-factory>
 </hibernate-configuration>

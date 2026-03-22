@@ -57,4 +57,12 @@ public class Student_Entity {
     public void setGrades(char grades) {
         Grades = grades;
     }
+
+
+    @Override
+    public String toString() {
+        return "Student [id=" + id + ", name=" + name + ", age=" + age + "]";
+    }
+
+
 }
