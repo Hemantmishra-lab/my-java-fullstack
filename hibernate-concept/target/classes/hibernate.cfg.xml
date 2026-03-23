@@ -18,14 +18,16 @@
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
-        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
 
         <!--mapping tag -->
         <mapping class ="com.hibernate.entities.Student_Entity"/>
         <mapping class="com.hibernate.entities.StudentAddress_Entity"/>
         <mapping class="com.hibernate.entities.Student_Entity"/>
-        <mapping class="com.hibernate.map.Question"/>
-        <mapping class="com.hibernate.map.Answer"/>
+        <mapping class="com.hibernate.map.OneToOne.Question"/>
+        <mapping class="com.hibernate.map.OneToOne.Answer"/>
+        <mapping class="com.hibernate.map.OneToMany.Customer"/>
+        <mapping class="com.hibernate.map.OneToMany.Order"/>
 
     </session-factory>
 </hibernate-configuration>

@@ -1,4 +1,4 @@
-package com.hibernate.map;
+package com.hibernate.map.OneToOne;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
