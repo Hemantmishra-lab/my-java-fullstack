@@ -30,7 +30,7 @@
         <mapping class="com.hibernate.map.OneToMany.Order"/>
         <mapping class="com.hibernate.map.ManyToMany.Course"/>
         <mapping class="com.hibernate.map.ManyToMany.Student"/>
-
+        <mapping class="com.hibernate.lifecycle.StudentLifeCycle"/>
 
     </session-factory>
 </hibernate-configuration>
