@@ -28,6 +28,9 @@
         <mapping class="com.hibernate.map.OneToOne.Answer"/>
         <mapping class="com.hibernate.map.OneToMany.Customer"/>
         <mapping class="com.hibernate.map.OneToMany.Order"/>
+        <mapping class="com.hibernate.map.ManyToMany.Course"/>
+        <mapping class="com.hibernate.map.ManyToMany.Student"/>
+
 
     </session-factory>
 </hibernate-configuration>
