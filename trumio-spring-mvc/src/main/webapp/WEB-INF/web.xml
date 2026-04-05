@@ -1,4 +1,4 @@
-<web-app xmlns="https://jakarta.ee" version="6.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<web-app xmlns="https://jakarta.ee https://jakarta.ee" version="6.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://jakarta.ee ">
 
   <servlet>

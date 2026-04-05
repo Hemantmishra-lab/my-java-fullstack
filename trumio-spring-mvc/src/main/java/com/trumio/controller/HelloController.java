@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HelloController {
 
     @RequestMapping("/hello")
-    public String sayHello() {
-        return "index"; // This points to index.jsp
+    public String sayHello(org.springframework.ui.Model model) {
+
+        model.addAttribute("serverMessage", "Data sent from Controller successfully!");
+        return "index";
     }
 }
