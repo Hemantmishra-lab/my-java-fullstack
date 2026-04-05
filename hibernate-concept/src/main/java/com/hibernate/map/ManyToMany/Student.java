@@ -1,39 +1,40 @@
 package com.hibernate.map.ManyToMany;
 
+
 import jakarta.persistence.*;
 
 import java.util.List;
 
-
 @Entity
-@Table(name = "m2m_student")
-public class Student {
+@Table(name = "m2mStudent")
+public class Student{
 
     @Id
     @Column(name = "Student_Id")
-    private int Student_Id;
+    private int Student_id;
 
     @Column(name = "Student_Name")
     private String Student_Name;
 
 
+
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
-            name = "student_course_map",
-            joinColumns = { @JoinColumn(name = "s_id") },
-            inverseJoinColumns = { @JoinColumn(name = "c_id") }
+            name = "Student_Course_Join",
+            joinColumns = {@JoinColumn(name = "Student_Id")},
+            inverseJoinColumns = {@JoinColumn(name = "Course_Id")}
     )
     private List<Course> courses;
 
     public Student() {
     }
 
-    public int getStudent_Id() {
-        return Student_Id;
+    public int getStudent_id() {
+        return Student_id;
     }
 
-    public void setStudent_Id(int student_Id) {
-        Student_Id = student_Id;
+    public void setStudent_id(int student_id) {
+        Student_id = student_id;
     }
 
     public String getStudent_Name() {
