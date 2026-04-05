@@ -31,6 +31,7 @@
         <mapping class="com.hibernate.map.ManyToMany.Course"/>
         <mapping class="com.hibernate.map.ManyToMany.Student"/>
         <mapping class="com.hibernate.lifecycle.StudentLifeCycle"/>
+        <mapping class="com.hibernate.cache.StudentCache"/>
 
     </session-factory>
 </hibernate-configuration>

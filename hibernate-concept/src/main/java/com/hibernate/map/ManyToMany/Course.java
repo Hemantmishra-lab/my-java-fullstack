@@ -1,21 +1,18 @@
 package com.hibernate.map.ManyToMany;
 
-
 import jakarta.persistence.*;
 
 import java.util.List;
 
 @Entity
-@Table(name = "courses")
-
-public class Course {
+public class Course{
 
     @Id
-    @Column(name = "Course_id")
-    private int Course_id;
+    @Column(name = "Course_Id")
+    private int Course_Id;
 
-    @Column(name = "Couse_name")
-    private String Course_name;
+    @Column(name = "Course_Name")
+    private String Course_Name;
 
     @ManyToMany(mappedBy = "courses")
     private List<Student> students;
@@ -23,20 +20,20 @@ public class Course {
     public Course() {
     }
 
-    public int getCourse_id() {
-        return Course_id;
+    public int getCourse_Id() {
+        return Course_Id;
     }
 
-    public void setCourse_id(int course_id) {
-        Course_id = course_id;
+    public void setCourse_Id(int course_Id) {
+        Course_Id = course_Id;
     }
 
-    public String getCourse_name() {
-        return Course_name;
+    public String getCourse_Name() {
+        return Course_Name;
     }
 
-    public void setCourse_name(String course_name) {
-        Course_name = course_name;
+    public void setCourse_Name(String course_Name) {
+        Course_Name = course_Name;
     }
 
     public List<Student> getStudents() {

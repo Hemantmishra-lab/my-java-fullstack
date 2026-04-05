@@ -11,7 +11,12 @@
         <module name="trumio-spring-core" />
         <module name="trumio-spring-jdc" />
         <module name="trumio-spring-orm" />
+        <module name="trumio-spring-mvc" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Spring-mvc" target="25" />
+      <module name="untitled" target="25" />
+    </bytecodeTargetLevel>
   </component>
 </project>
