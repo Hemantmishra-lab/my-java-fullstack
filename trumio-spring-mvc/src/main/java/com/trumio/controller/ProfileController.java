@@ -1,4 +1,4 @@
-package com.trumio.secController;
+package com.trumio.controller;
 
 
 import org.springframework.stereotype.Controller;
