@@ -12,11 +12,12 @@
            http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <!-- Tell Spring to scan your package for @Controller -->
-    <context:component-scan base-package="com.trumio.controller"/>
+    <context:component-scan base-package="com.trumio.controller, com.trumio.secController"/>
 
+    <mvc:annotation-driven />
     <!-- This maps the "index" string from controller to /index.jsp -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/"/>
+        <property name="prefix" value="/WEB-INF/view/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
 
