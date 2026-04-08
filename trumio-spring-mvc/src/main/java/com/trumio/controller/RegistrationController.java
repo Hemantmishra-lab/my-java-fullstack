@@ -11,7 +11,7 @@ public class RegistrationController {
 
     @RequestMapping("/register")
     public String showForm() {
-        return "register";
+        return "register"; // Yeh 'register.jsp' ko dhoondega
     }
 
 
