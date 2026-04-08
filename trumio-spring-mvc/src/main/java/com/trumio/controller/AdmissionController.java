@@ -23,10 +23,10 @@ public class AdmissionController {
             @RequestParam("sSubjects") List<String> subjects, // List automatically handle hogi
             Model model) {
 
-        // 1. Aapki existing class ka object banana using constructor
+       
         Student studentObj = new Student(id, name, course, subjects);
 
-        // 2. Pure object ko Model mein dalna
+       
         model.addAttribute("st", studentObj);
 
         return "confirm-page";
