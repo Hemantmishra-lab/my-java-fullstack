@@ -8,7 +8,7 @@
 
     <p>Selected Subjects:</p>
     <ul>
-        <%-- JSP standard tag library (JSTL) use kar sakte ho ya simple expression --%>
+        <%-- JSP standard tag library (JSTL)--%>
         ${st.subjects}
     </ul>
 
