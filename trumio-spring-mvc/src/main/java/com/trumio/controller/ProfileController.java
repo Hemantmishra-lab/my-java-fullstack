@@ -1,5 +1,6 @@
 package com.trumio.controller;
 
+//ProfileController.java -> profile.jsp
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

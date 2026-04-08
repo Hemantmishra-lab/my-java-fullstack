@@ -2,6 +2,9 @@
 <%@ page import="java.time.LocalDateTime" %>
 <%@ page import="java.util.List" %>
 <!DOCTYPE html>
+
+<!-- HelpController.java -> help.jsp -->
+
 <html>
 <head>
     <title>Help Center</title>

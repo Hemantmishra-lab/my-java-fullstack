@@ -5,6 +5,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
+//HttpServletRequest-> Employee.java(Model) register.jsp(view - input) Controller: RegistrationController.java View (Output): welcome.jsp
+
 @Controller
 public class RegistrationController {
 

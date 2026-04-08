@@ -8,3 +8,5 @@
     </form>
 </body>
 </html>
+<!-- HttpServletRequest-> Employee.java(Model) register.jsp(view - input) Controller: RegistrationController.java View (Output): welcome.jsp
+ -->

@@ -1,5 +1,8 @@
 package com.trumio.controller;
 
+
+//DashboardController -> dashboard.jsp
+
 import com.trumio.model.Student;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

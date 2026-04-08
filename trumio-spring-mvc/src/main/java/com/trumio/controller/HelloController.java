@@ -3,6 +3,8 @@ package com.trumio.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+//HelloController.java -> index.jsp
+
 @Controller
 public class HelloController {
 

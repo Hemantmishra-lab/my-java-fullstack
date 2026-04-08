@@ -1,4 +1,7 @@
 <html>
+
+<!-- RegistrationController.java -> Model: Student.java -> View (Input): admission-form.jsp -> Controller: AdmissionController.java -> View (Output): confirm-page.jsp -->
+
 <body>
     <h2>Student Admission Form (@RequestParam Example)</h2>
     <form action="processAdmission" method="POST">
@@ -17,3 +20,4 @@
     </form>
 </body>
 </html>
+

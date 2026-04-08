@@ -1,4 +1,8 @@
 <html>
+
+<!--HttpServletRequest-> Employee.java(Model) register.jsp(view - input) Controller: RegistrationController.java View (Output): welcome.jsp
+ -->
+
 <body>
     <h1>Registration Successful!</h1>
     <p>Employee ID: ${displayId}</p>

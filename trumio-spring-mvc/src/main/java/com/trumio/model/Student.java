@@ -2,6 +2,8 @@ package com.trumio.model;
 
 import java.util.List;
 
+
+//RegistrationController.java -> Model: Student.java -> View (Input): admission-form.jsp -> Controller: AdmissionController.java -> View (Output): confirm-page.jsp
 public class Student {
     private int id;
     private String name;

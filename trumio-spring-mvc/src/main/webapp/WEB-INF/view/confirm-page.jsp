@@ -1,4 +1,6 @@
 <html>
+
+<!-- RegistrationController.java -> Model: Student.java -> View (Input): admission-form.jsp -> Controller: AdmissionController.java -> View (Output): confirm-page.jsp -->
 <body>
     <h1>Admission Confirmed!</h1>
     <hr>
@@ -8,7 +10,7 @@
 
     <p>Selected Subjects:</p>
     <ul>
-        <%-- JSP standard tag library (JSTL) use kar sakte ho ya simple expression --%>
+        <%-- You can use JSP standard tag library (JSTL) or simple expression --%>
         ${st.subjects}
     </ul>
 
