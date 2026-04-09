@@ -17,7 +17,6 @@
         <maven.compiler.target>21</maven.compiler.target>
         <spring.version>6.1.5</spring.version>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -49,6 +48,7 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+
     <build>
         <finalName>trumio-spring-mvc</finalName>
     </build>

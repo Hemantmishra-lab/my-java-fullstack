@@ -18,7 +18,7 @@ public class BookingController {
         return "booking-form";
     }
 
-    // Handles form submission using @ModelAttribute
+        // Handles form submission using @ModelAttribute
     @RequestMapping(path = "/confirmBooking", method = RequestMethod.POST)
     public String processBooking(@ModelAttribute("booking") FlightBooking flightData) {
 
