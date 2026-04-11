@@ -1,11 +1,17 @@
 package com.trumio.model;
 
-import java.util.List;
+import jakarta.persistence.*;
 
+import java.util.List;
+@Entity
+@Table(name = "car")
 public class CarBooking {
     private String passengerName;
+    @Id
     private int passengerNumber;
     private String finalDestination;
+    @ElementCollection
+    @CollectionTable(name = "visit-Places", joinColumns = @JoinColumn(name = "Car-Passenger_id"))
     private List<String> visitPlaces;
 
     public CarBooking() {}
