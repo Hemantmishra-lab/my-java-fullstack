@@ -1,11 +1,17 @@
 package com.trumio.model;
 
-import java.util.List;
+import jakarta.persistence.*;
 
+import java.util.List;
+@Entity
+@Table(name = "Books")
 public class Book {
     private String title;
     private String author;
+    @Id
     private int isbn;
+    @ElementCollection
+    @CollectionTable(name = "book_volumes", joinColumns = @JoinColumn(name = "book_id"))
     private List<String> volumes;
 
     // Default Constructor (Important for Spring)
@@ -15,6 +21,7 @@ public class Book {
     public Book(String title, String author, int isbn, List<String> volumes) {
         this.title = title;
         this.author = author;
+
         this.isbn = isbn;
         this.volumes = volumes;
     }
