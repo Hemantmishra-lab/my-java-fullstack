@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="truio-java-lang" />
+        <module name="BookSphere" />
         <module name="hibernate-concept" />
         <module name="trumio-spring-core" />
         <module name="trumio-spring-jdc" />

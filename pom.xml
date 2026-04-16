@@ -12,6 +12,7 @@
     <module>hibernate-concept</module>
 
     <module>trumio-spring-mvc</module>
+    <module>BookSphere</module>
 
   </modules>
   <properties>
