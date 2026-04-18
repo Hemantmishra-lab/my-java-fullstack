@@ -1,4 +1,4 @@
-package com.booksphere.service.impl;
+package com.booksphere.services.impl;
 
 import com.booksphere.dao.AuthorDao;
 import com.booksphere.model.Author;
@@ -11,25 +11,40 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-@Transactional
-public class AuthorServiceImpl implements AuthorService {
-
-    private static final Logger LOG = LoggerFactory.getLogger(AuthorServiceImpl.class);
-
-    @Autowired private AuthorDao authorDao;
-
-    @Override @Transactional(readOnly = true)
-    public List<Author> findAll() { LOG.info("BookSphere :: getAuthors()"); return authorDao.findAll(); }
-
-    @Override @Transactional(readOnly = true)
-    public Author findById(Long id) { return authorDao.findById(id); }
+public class AuthorServiceImpl implements AuthorService{
+    private static final Logger Log = LoggerFactory.getLogger(AuthorServiceImpl.class);
+    @Autowired
+    private AuthorDao authorDao;
 
     @Override
-    public void save(Author author) { LOG.info("BookSphere :: saveAuthor({})", author.getName()); authorDao.save(author); }
+    @Transactional(readOnly = true)
+    public List<Author> findAll(){
+        Log.info("BookSphere :: getAuthors()");
+        return authorDao.findAll();
+    }
 
     @Override
-    public void delete(Long id) { LOG.info("BookSphere :: deleteAuthor({})", id); authorDao.delete(id); }
+    @Transactional(readOnly = true)
+    public Author findById(Long id){
+        return authorDao.findById(id);
+    }
 
-    @Override @Transactional(readOnly = true)
-    public long count() { return authorDao.count(); }
+    @Override
+    @Transactional
+    public void save(Author author){
+        Log.info("BookSphere :: saveAuthor({})",author.getName());
+        authorDao.save(author);
+    }
+
+    @Override
+    public void delete(Long id){
+        Log.info("BookSphere :: deleteAuthor({})",id);
+        authorDao.delete(id);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public long count(){
+        return authorDao.count();
+    }
 }

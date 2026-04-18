@@ -3,28 +3,28 @@ package com.booksphere.config;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.hibernate.cfg.AvailableSettings;
-import org.hibernate.validator.internal.util.logging.Log;
-import org.hibernate.validator.internal.util.logging.LoggerFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.*;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.FilterType;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
 import java.util.Properties;
-import java.util.logging.Logger;
-
-import static org.hibernate.validator.internal.util.logging.LoggerFactory.*;
-import static org.springframework.context.annotation.FilterType.ANNOTATION;
-
 @Configuration
 @PropertySource("classpath:application.properties")
 @ComponentScan(
         basePackages = "com.booksphere",
         excludeFilters = {
-                @ComponentScan.Filter(type = ANNOTATION,classes =Controller.class ),
-                @ComponentScan.Filter(type = ANNOTATION,classes = Configuration.class)
+                @ComponentScan.Filter(type = FilterType.ANNOTATION,classes =Controller.class ),
+                @ComponentScan.Filter(type = FilterType.ANNOTATION,classes = Configuration.class)
         }
 )
 public class AppConfig {
@@ -63,7 +63,7 @@ public class AppConfig {
         config.setMinimumIdle(hikariMinIdle);
         config.setIdleTimeout(hikariIdleTimeout);
         config.setConnectionTimeout(hikariConnectionTimeout);
-        config.setConnectionTestQuery(hikariMaxLifetime);
+        config.setConnectionTestQuery(String.valueOf(hikariMaxLifetime));
 
 
        return new HikariDataSource(config);
