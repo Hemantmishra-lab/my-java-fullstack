@@ -2,10 +2,14 @@ com\trumio\Service\StudentService.class
 com\trumio\DAO\StudentDAO.class
 com\trumio\DAO\BookDAO.class
 com\trumio\controller\BookController.class
+com\trumio\DAO\CarBookingDAO.class
 com\trumio\model\Book.class
+com\trumio\Service\EmployeeService.class
 com\trumio\controller\HelpController.class
 com\trumio\Service\BookServices.class
+com\trumio\Service\CarService.class
 com\trumio\controller\RegistrationController.class
+com\trumio\DAO\EmployeeDAO.class
 com\trumio\controller\AdmissionController.class
 com\trumio\controller\ProfileController.class
 com\trumio\model\CarBooking.class

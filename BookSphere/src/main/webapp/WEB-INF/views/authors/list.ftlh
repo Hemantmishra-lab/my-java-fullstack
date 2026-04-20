@@ -3,7 +3,7 @@
 
 <div class="d-flex justify-content-between align-items-center mb-3">
     <h2 class="mb-0"><i class="bi bi-pen text-primary me-2"></i>Authors</h2>
-    <a href="${ctx}/authors/new" class="btn btn-primary"><i class="bi bi-plus-lg me-1"></i>Add Author</a>
+    <a href="${springMacroRequestContext.contextPath}/authors/new" class="btn btn-primary"><i class="bi bi-plus-lg me-1"></i>Add Author</a>
 </div>
 
 <div class="card border-0 shadow-sm">
@@ -20,12 +20,12 @@
                     <td><strong>${a.name?html}</strong></td>
                     <td class="small text-muted">${(a.biography?truncate(80))!''}</td>
                     <td>
-                        <a href="${ctx}/authors/edit/${a.id}" class="btn btn-sm btn-outline-primary me-1">
+                        <a href="${springMacroRequestContext.contextPath}/authors/edit/${a.id}" class="btn btn-sm btn-outline-primary me-1">
                             <i class="bi bi-pencil"></i>
                         </a>
-                        <form method="POST" action="${ctx}/authors/delete/${a.id}" class="d-inline">
+                        <form method="POST" action="${springMacroRequestContext.contextPath}/authors/delete/${a.id}" class="d-inline">
                             <button type="button" class="btn btn-sm btn-outline-danger"
-                                    onclick="confirmDelete(this.form, '${a.name?js_string}')">
+                                    onclick="if(confirm('Delete ${a.name?js_string}?')) this.form.submit()">
                                 <i class="bi bi-trash"></i>
                             </button>
                         </form>
