@@ -1,0 +1,9 @@
+com\booksphere\services\impl\AuthorServiceImpl.class
+com\booksphere\config\AppInitializer.class
+com\booksphere\controller\AuthorController.class
+com\booksphere\config\AppConfig.class
+com\booksphere\services\AuthorService.class
+com\booksphere\dao\AuthorDao.class
+com\booksphere\config\WebConfig.class
+com\booksphere\model\Author.class
+com\booksphere\dao\impl\AuthorDaoImpl.class
