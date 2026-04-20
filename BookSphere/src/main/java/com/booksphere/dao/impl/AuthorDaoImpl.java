@@ -6,6 +6,7 @@ import com.booksphere.model.Author;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -16,7 +17,7 @@ public class AuthorDaoImpl implements AuthorDao {
 
     @Override
     public List<Author> findAll(){
-        return sessionFactory.getCurrentSession().createQuery("FROM Author a ORDER BY a.name,Author.class").list();
+        return sessionFactory.getCurrentSession().createQuery("from Author", Author.class).list();
     }
 
     @Override
@@ -28,6 +29,7 @@ public class AuthorDaoImpl implements AuthorDao {
         sessionFactory.getCurrentSession().merge(author);
     }
     @Override
+    @Transactional
     public void delete(Long id){
         Author a = sessionFactory.getCurrentSession().get(Author.class,id);
         if(a!=null) sessionFactory.getCurrentSession().remove(a);

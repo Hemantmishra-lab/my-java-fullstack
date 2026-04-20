@@ -31,7 +31,7 @@ public class AuthorController {
     }
 
     @GetMapping("/edit/{id}")
-    public String showEditForm(@PathVariable Long id, Model model) {
+    public String showEditForm(@PathVariable("id") Long id, Model model) {
         model.addAttribute("author",     authorService.findById(id));
         model.addAttribute("activePage", "authors");
         return "authors/form";
@@ -49,7 +49,7 @@ public class AuthorController {
     }
 
     @PostMapping("/delete/{id}")
-    public String delete(@PathVariable Long id, RedirectAttributes redirectAttributes) {
+    public String delete(@PathVariable("id") Long id, RedirectAttributes redirectAttributes) {
         Author a = authorService.findById(id);
         authorService.delete(id);
         redirectAttributes.addFlashAttribute("successMessage", "Author deleted.");
