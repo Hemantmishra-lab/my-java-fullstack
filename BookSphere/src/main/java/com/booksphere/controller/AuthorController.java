@@ -55,4 +55,15 @@ public class AuthorController {
         redirectAttributes.addFlashAttribute("successMessage", "Author deleted.");
         return "redirect:/authors";
     }
+    @GetMapping("/test")
+    @ResponseBody // Isse HTML nahi, sirf plain text return hoga
+    public String testPostman() {
+        return "Postman is working with my AuthorController!";
+    }
+
+    @GetMapping("/greet")
+    @ResponseBody
+    public String greet(@RequestParam("name") String name) {
+        return "Hello, " + name + "! Welcome to BookSphere.";
+    }
 }
